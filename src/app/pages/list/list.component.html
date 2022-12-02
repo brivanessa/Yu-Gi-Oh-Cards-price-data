@@ -1,6 +1,17 @@
-<div class="list">
+<div class="list"
+infiniteScroll
+[infiniteScrollDistance]="2"
+[infiniteScrollThrottle]="100"
+(scrolled)="onScroll()"
+>
   <input class="form-control" type="text" placeholder="Buscar coincidencias de cartas">
   <div class="cards">
-    <app-card *ngFor="item of [1,2,3,4,5,6]"></app-card>
+   <!--
+  infiniteScroll //es directiva infinity scrool
+  [infiniteScrollDistance]="2" //distancia entre el scroll y el final del scrool apartir de la cual se hara el cambio
+  [infiniteScrollThrottle]="50" //al llegar a esa distancia son 50 milisegundos para ejecutar algo
+  (scrolled)="onScroll()" // el evento scrolled que nso dice cuando ejecutar la funcion onscroll
+    fff -->
+    <app-card *ngFor="let item of cards" [cardItem]="item"></app-card>
   </div>
 </div>

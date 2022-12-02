@@ -7,6 +7,8 @@ import { CardComponent } from './components/card/card.component';
 import { ExampleComponent } from './components/example/example.component';
 import { ListComponent } from './pages/list/list.component';
 import { DetailComponent } from './pages/detail/detail.component';
+import { HttpClientModule} from '@angular/common/http'
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { DetailComponent } from './pages/detail/detail.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule, //para cosnultas http
+    InfiniteScrollModule //para el scroll
   ],
   providers: [],
   bootstrap: [AppComponent]

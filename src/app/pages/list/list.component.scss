@@ -1,10 +1,12 @@
 .list{
- width: 85%;
+ width: 90%;
  margin: auto;
- margin-top: 2rem
+//  margin-top: 2rem
 }
 .cards{
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(60rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); //crea cuantas columnas puedas (auto-fill) siguiendo estas reglas (minmax(16rem, 1fr))
+  //gap:0.5rem; //separacion entre columnas
+  justify-items:center;
 }
