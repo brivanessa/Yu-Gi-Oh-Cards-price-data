@@ -9,6 +9,7 @@ import { ListComponent } from './pages/list/list.component';
 import { DetailComponent } from './pages/detail/detail.component';
 import { HttpClientModule} from '@angular/common/http'
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { InfiniteScrollModule } from "ngx-infinite-scroll";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule, //para cosnultas http
-    InfiniteScrollModule //para el scroll
+    InfiniteScrollModule, //para el scroll
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

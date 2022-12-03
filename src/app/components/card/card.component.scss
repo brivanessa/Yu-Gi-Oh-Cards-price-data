@@ -1,8 +1,9 @@
+
 .ygo-card{
   img{
-    // width: 100%;
-    // object-fit: cover;
     width: 15rem;
-    margin:1.5rem
+    margin:1.5rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 4px 4px #f9f9fb;
   }
 }

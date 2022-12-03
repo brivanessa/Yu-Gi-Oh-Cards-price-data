@@ -2,9 +2,8 @@
 infiniteScroll
 [infiniteScrollDistance]="2"
 [infiniteScrollThrottle]="100"
-(scrolled)="onScroll()"
->
-  <input class="form-control" type="text" placeholder="Buscar coincidencias de cartas">
+(scrolled)="onScroll()">
+  <input class="form-control" type="text" placeholder="Buscar coincidencias de cartas" [formControl]="searchCard">
   <div class="cards">
    <!--
   infiniteScroll //es directiva infinity scrool
