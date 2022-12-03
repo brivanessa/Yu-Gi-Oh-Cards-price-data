@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 // import{Card} from '../interfaces/card.interface'
 
 @Injectable({
@@ -25,6 +25,15 @@ export class CardService {
     )
   }
 
+  getCard(id:string){
+    const params:any = {id}
+    return this.http.get(this.API_URL,{params})
+     .pipe(map((res:any)=>{return res.data[0]})
+    //.pipe(tap(console.log) // para probar si se guarda luego de   *ngIf="card$ | async as card" en detail.component html
+    )
+  }
+
+
   getCards2(name: string | null){ //name puede ser string o null cuando no escribimos nada en el buscador
     const params: any = {
       fname: name
@@ -42,8 +51,7 @@ export class CardService {
       offset: startItem, // desde que item se imprime
     };
     return this.http.get(this.API_URL,{params})
-    .pipe(
-      map((res:any)=>{return res.data})
-    )
+    .pipe(map((res:any)=>{return res.data}))
+
   }
 }

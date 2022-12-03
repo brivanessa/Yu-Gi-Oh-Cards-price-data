@@ -1,16 +1,20 @@
-<div class="detailCard">
+<div
+  class="detailCard"
+  *ngIf="card$ | async as card"
+>
+<!-- |es simbolo de pipe de (tuberia) la rta de card$ | async se almacena es card -->
 
   <div class ="spaceImg">
-    <img  src="https://images.ygoprodeck.com/images/cards/6983839.jpg" alt="carta yugioh">
+    <img  [src]="card.card_images[0].image_url" alt="carta yugioh">
   </div>
 
   <div class ="informationCard">
-    <h2>Nombre de la Carta</h2>
+    <h2>{{card.name}}</h2>
 
     <div class="information">
-      <p class="description">Descripcion</p>
-      <h3 class="subtitle">Titulo</h3>
-      <p class="description">Descripcion</p>
+      <p class="description">{{card.desc}}</p>
+      <p class="description">Tipo: {{card.type}} - Subtipo: {{card.race}}</p>
+
     </div>
 
     <table class="table"> <!-- clase de bootstrap -->
@@ -22,7 +26,7 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">Market 1</th>
+          <th scope="row">Market 1</th> <!-- el keyvalue convierte un objeto en iterable -->
           <td>Price 1</td>
       </tr>
       </tbody>
