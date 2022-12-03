@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Datum } from 'src/app/interfaces/card.interface';
 
 @Component({
@@ -8,4 +9,10 @@ import { Datum } from 'src/app/interfaces/card.interface';
 })
 export class CardComponent {
 @Input() cardItem!:Datum;
+
+constructor(private router:Router){}
+
+goToCard(){
+  this.router.navigate([`./card/${this.cardItem.id}`])
+}
 }
