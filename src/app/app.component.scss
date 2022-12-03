@@ -4,13 +4,17 @@
  height: 100vh;
 //  margin: -1.1%;
  color: white;
- background-image: url('https://www.pixelstalk.net/wp-content/uploads/images6/Galaxy-HD-Wallpaper-Free-download-1.jpg');
- background-size: 100%;
+//  background-image: url('https://www.pixelstalk.net/wp-content/uploads/images6/Galaxy-HD-Wallpaper-Free-download-1.jpg');
+background-color: rgb(15, 15, 31);
+background-size: 100%;
+padding: 0rem;
+margin: 0rem;
  }
 
 .content{
   margin: 0;
-  background-image: url('https://www.pixelstalk.net/wp-content/uploads/images6/Galaxy-HD-Wallpaper-Free-download-1.jpg');
+  // background-image: url('https://www.pixelstalk.net/wp-content/uploads/images6/Galaxy-HD-Wallpaper-Free-download-1.jpg');
+ background-color: rgb(15, 15, 31);
   background-size: 100vw;
-  padding: 2rem;
+  // padding: 2rem;
  }
