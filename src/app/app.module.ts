@@ -10,6 +10,7 @@ import { DetailComponent } from './pages/detail/detail.component';
 import { HttpClientModule} from '@angular/common/http'
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
 import { ReactiveFormsModule } from '@angular/forms';
+import { MarketNamePipe } from './pipes/market-name.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardComponent,
     ExampleComponent,
     ListComponent,
-    DetailComponent
+    DetailComponent,
+    MarketNamePipe
   ],
   imports: [
     BrowserModule,

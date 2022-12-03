@@ -25,9 +25,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">Market 1</th> <!-- el keyvalue convierte un objeto en iterable -->
-          <td>Price 1</td>
+        <tr *ngFor="let market of card.card_prices[0] | keyvalue"> <!-- el keyvalue convierte un objeto en iterable (esto ayuda cuando no tenemos arrays y si un objeto) -->
+          <th scope="row">{{market.key | marketName}}</th> <!-- uso un pipe (market-name.pipe.ts) para transformar el nombre de visualizacion de la propiedad key-->
+          <td>{{market.value}}</td><!-- rda '|' es el operador pipe // se usa pipes para no transformar la variable sino solo lo que ve el usuario-->
       </tr>
       </tbody>
     </table>
