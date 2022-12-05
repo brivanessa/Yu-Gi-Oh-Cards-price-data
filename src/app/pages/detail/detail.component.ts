@@ -9,6 +9,7 @@ import { Datum } from '../../interfaces/card.interface';
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss']
 })
+
 export class DetailComponent implements OnInit{
   //para capturar el identificador de la carta
   id!:string;
